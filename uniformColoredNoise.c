@@ -41,23 +41,4 @@ int main()
     time_in_micros2 = 1000000 * tv.tv_sec + tv.tv_usec;
     double dT_usec = (time_in_micros2 - time_in_micros);
     printf("%d random colored noise values, run time in sec %f, average time per noise val usec %f\n", NTRIALS, dT_usec / 1e6, dT_usec/NTRIALS );
-
-
-    // #include <stdio.h>
-    // #include <stdlib.h>
-    // #include <math.h>
-    // #include <time.h>
-
-    // // srand ( time(NULL) ); // Seed for random numbers.
-    // int RMAX = 1000000;
-    // int dim = pow(2,24) - 1;
-    // int rint = rand() % RMAX;
-    // printf("rint %d rand max %d\n", rint,RMAX);
-    // double rval = ((double)rint)/(double)RMAX;
-    // int val = (int) ( (double)dim * rval);
-    // printf("dim %d rval %f val %d\n", dim);
-    // unsigned char r =  (unsigned char)val;
-    // unsigned char g = (unsigned char)val >> 3;
-    // unsigned char b = (unsigned char)val >> 6;
-    // printf("r %d g %d b %d\n", r, g , b);
 }
