@@ -8,7 +8,7 @@
 int main()
 {
     struct timeval tv;
-    unsigned long time_in_micros,time_in_micros2;
+    uint64_t time_in_micros,time_in_micros2;
 
 
     int dim,val,rIndex;
@@ -20,7 +20,7 @@ int main()
 
     gettimeofday(&tv,NULL);
     time_in_micros = 1000000 * tv.tv_sec + tv.tv_usec;
-    srand(time_in_micros); 
+    srand(time_in_micros % UINT_MAX); 
 
 
     for (i = 0; i < NTRIALS;i++) {
